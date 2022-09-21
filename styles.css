@@ -1,0 +1,14 @@
+body {
+  background-color: peru;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+}
