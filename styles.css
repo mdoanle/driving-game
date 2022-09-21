@@ -11,17 +11,18 @@ img {
   height: 150px;
   width: 150px;
   position: absolute;
-  transition: all 2s ease-in-out;
+  left: 0;
+  transition: all 0.16s linear;
 }
 
 .face-down {
-  transform: rotate(0.25turn);
+  transform: rotate(90deg);
 }
 
 .face-back {
-  transform: rotate(0.5turn);
+  transform: rotate(180deg);
 }
 
 .face-up {
-  transform: rotate(-0.25turn);
+  transform: rotate(270deg);
 }

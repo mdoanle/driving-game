@@ -1,6 +1,8 @@
 var $car = document.querySelector('img');
 document.addEventListener('keydown', handleKeydown);
 var xAxis = 0;
+var carIgnition = false;
+var interval = null;
 
 function handleKeydown(event) {
   if (event.key === 'ArrowDown') {
@@ -9,8 +11,16 @@ function handleKeydown(event) {
     turnCarLeft();
   } else if (event.key === 'ArrowUp') {
     turnCarUp();
-  } else {
+  } else if (event.key === 'ArrowRight') {
     resetDirection();
+  } else if (event.key === ' ') {
+    if (!carIgnition) {
+      interval = setInterval(moveCarRight, 16);
+      carIgnition = true;
+    } else {
+      clearInterval(interval);
+      carIgnition = false;
+    }
   }
 
 }
@@ -20,7 +30,7 @@ function turnCarDown() {
 }
 
 function resetDirection() {
-  $car.className = '';
+  $car.className = 'face-right';
 }
 
 function turnCarLeft() {
@@ -31,14 +41,7 @@ function turnCarUp() {
   $car.className = 'face-up';
 }
 
-document.addEventListener('keydown', vroomVroom);
-function vroomVroom(event) {
-  if (event.key === 'a') {
-    setInterval(moveCarRight, 16);
-  }
-}
-
 function moveCarRight() {
-  $car.style.left = xAxis + 'rem';
-  xAxis += 50;
+  $car.style.left = xAxis + 'px';
+  xAxis += 3;
 }
