@@ -11,4 +11,15 @@ img {
   height: 150px;
   width: 150px;
 }
+
+.face-down {
+  transform: rotate(0.25turn);
+}
+
+.face-back {
+  transform: rotate(0.5turn);
+}
+
+.face-up {
+  transform: rotate(-0.25turn);
 }
