@@ -10,6 +10,8 @@ body {
 img {
   height: 150px;
   width: 150px;
+  position: absolute;
+  transition: all 2s ease-in-out;
 }
 
 .face-down {
@@ -22,4 +24,8 @@ img {
 
 .face-up {
   transform: rotate(-0.25turn);
+}
+
+.move-right {
+  transform: translate(100vw, 0);
 }

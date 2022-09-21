@@ -29,3 +29,14 @@ function turnCarLeft() {
 function turnCarUp() {
   $car.className = 'face-up';
 }
+
+function startCar() {
+  $car.className = 'move-right';
+}
+
+document.addEventListener('keydown', vroomVroom);
+function vroomVroom(event) {
+  if (event.key === 'a') {
+    startCar();
+  }
+}
