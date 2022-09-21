@@ -1,5 +1,6 @@
 var $car = document.querySelector('img');
 document.addEventListener('keydown', handleKeydown);
+var xAxis = 0;
 
 function handleKeydown(event) {
   if (event.key === 'ArrowDown') {
@@ -30,13 +31,14 @@ function turnCarUp() {
   $car.className = 'face-up';
 }
 
-function startCar() {
-  $car.className = 'move-right';
-}
-
 document.addEventListener('keydown', vroomVroom);
 function vroomVroom(event) {
   if (event.key === 'a') {
-    startCar();
+    setInterval(moveCarRight, 16);
   }
+}
+
+function moveCarRight() {
+  $car.style.left = xAxis + 'rem';
+  xAxis += 50;
 }

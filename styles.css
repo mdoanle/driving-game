@@ -25,7 +25,3 @@ img {
 .face-up {
   transform: rotate(-0.25turn);
 }
-
-.move-right {
-  transform: translate(100vw, 0);
-}
